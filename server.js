@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const Anthropic = require("@anthropic-ai/sdk");
-const { PERSONALITY_PROMPTS } = require("./public/prompts.js");
+const { PERSONALITY_PROMPTS } = require("./lib/prompts.js");
 
 const app = express();
 app.use(express.json());

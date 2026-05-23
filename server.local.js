@@ -5,7 +5,9 @@ const { PERSONALITY_PROMPTS } = require("./lib/prompts.js");
 
 const app = express();
 app.use(express.json());
-app.use(express.static("public"));
+// Local dev only — serves static files from root
+// Vercel deploys from /api/ serverless functions; do NOT deploy this file.
+app.use(express.static("."));
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 

@@ -2,9 +2,9 @@
   "name": "mbti-ai",
   "version": "1.0.0",
   "description": "MBTI 16 Personalities AI Roundtable",
-  "main": "server.js",
+  "main": "server.local.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node server.local.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

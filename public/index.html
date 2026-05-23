@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MBTI 16人格 AI 圆桌会</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <h1>MBTI 16人格 AI 圆桌会</h1>
+        <button id="themeToggle" class="theme-toggle" title="切换主题" aria-label="切换明暗主题">
+          <span class="theme-icon-dark">☀️</span>
+          <span class="theme-icon-light">🌙</span>
+        </button>
+      </div>
+      <p class="subtitle">选择你想请教的角色，抛出一个话题，看看他们怎么说</p>
+    </header>
+
+    <!-- Personality Selection Panel -->
+    <div id="selectionPanel" class="selection-panel">
+      <div class="selection-header">
+        <span class="selection-title">选择人格</span>
+        <div class="selection-actions">
+          <button id="selectAllBtn" class="select-all-btn">全选</button>
+          <span id="selectionCount" class="selection-count">0/16</span>
+        </div>
+      </div>
+      <div id="selectionGroups" class="selection-groups">
+        <!-- Groups rendered by JS -->
+      </div>
+    </div>
+
+    <div class="input-area">
+      <form id="questionForm">
+        <input
+          type="text"
+          id="questionInput"
+          placeholder="输入你的问题..."
+          autocomplete="off"
+          maxlength="150"
+        />
+        <button type="submit" id="submitBtn" disabled>提问</button>
+        <button type="button" id="clearBtn" class="clear-btn hidden">重新提问</button>
+      </form>
+    </div>
+
+    <div id="statusBar" class="status-bar hidden"></div>
+
+    <div id="grid" class="personality-grid">
+      <div class="empty-state">
+        <div class="empty-icon">👆</div>
+        <p>先在上面选择你想请教的角色（可多选），然后输入问题</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
